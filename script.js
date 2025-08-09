@@ -1,2 +1,2 @@
-let password = process.env.PASSWORD;
+let password = env.PASSWORD;
 console.log(password);
