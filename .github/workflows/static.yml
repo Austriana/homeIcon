@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  PASSWORD: ${{ secrets.PASSWORD}}
+  PASSWORD: ${{ secrets.PASSWORD }}
 
 jobs:
   # Single deploy job since we're just deploying
