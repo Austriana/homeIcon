@@ -1,4 +1,4 @@
-async () => {
+let fetch_data = async () => {
   const url = "https://austriana.github.io/kontakt/data.json";
   try {
     const response = await fetch(url);
@@ -17,3 +17,5 @@ function convertData (result){
     let passwort = result.PASSWORD;
     console.log(passwort);
 }
+
+fetch_data();
