@@ -1,7 +1,7 @@
-let fetch_data = async () => {
-    let fetch = await fetch('https://austriana.github.io/kontakt/data.json');
-    let data = JSON.parse(fetch);
-    console.log(data);
+async function fetch_data(){
+    let res = await fetch('https://austriana.github.io/kontakt/data.json');
+    let data = await res.json();
+    return data;
 }
 
-fetch_data();
+console.log(fetch_data());
