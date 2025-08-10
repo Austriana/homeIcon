@@ -24,8 +24,6 @@ concurrency:
 env:
   PASSWORD: ${{ secrets.PASSWORD }}
 
-on: |
-  echo: $PASSWORD
   
 jobs:
   # Single deploy job since we're just deploying
@@ -47,3 +45,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        run: |
+          echo '$PASSWORD'
