@@ -6,12 +6,10 @@ let fetch_data = async () => {
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    convertData(result);
-    console.log(convertData(result))
+    console.log(result.PASSWORD)
   } catch (error) {
     console.error(error.message);
   }
 }
-const convertData = result => result.PASSWORD;
 
 fetch_data();
