@@ -1,7 +1,7 @@
 {
-    "Name": "Marco M.",
-    "Adresse": "93133 Burglengenfeld",
-    "Email": "Marco.M@gmx.de",
-    "Telefon": "01767376649",
-    "Password": "password"
+    "name": "Marco M.",
+    "adresse": "93133 Burglengenfeld",
+    "email": "Marco.M@gmx.de",
+    "telefon": "01767376649",
+    "password": "password"
 }

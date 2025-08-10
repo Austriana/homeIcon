@@ -6,11 +6,11 @@ let fetch_data = async () => {
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    const name = result.Name;
-    const email = result.Email;
-    const adresse = result.Adresse;
-    const telefon = result.Telefon;
-    const passwort = result.PASSWORD;
+    const name = result.name;
+    const email = result.email;
+    const adresse = result.adresse;
+    const telefon = result.telefon;
+    const passwort = result.passwort;
 
     console.log(name, email, adresse, telefon, passwort)
 
