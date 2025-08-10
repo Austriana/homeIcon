@@ -1,10 +1,16 @@
-let fetch_data =  async () => {
-    let response = await fetch('https://austriana.github.io/kontakt/data.json').json;
-    return response;
+async function getData() {
+  const url = "https://austriana.github.io/kontakt/data.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
-let myData = async () => {
-    let myObj = await fetch_data();
-    console.log(myObj['PASSWORD']);
-}
-myData();
+getData();
