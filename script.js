@@ -19,3 +19,4 @@ function convertData (result){
 }
 
 fetch_data();
+console.log(fetch_data());
