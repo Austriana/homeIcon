@@ -1,5 +1,3 @@
-
-
 async () => {
   const url = "https://austriana.github.io/kontakt/data.json";
   try {
