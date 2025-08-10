@@ -20,10 +20,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
-env:
-  PASSWORD: ${{ secrets.PASSWORD }}
-
   
 jobs:
   # Single deploy job since we're just deploying
@@ -45,5 +41,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          echo '$PASSWORD'
+          echo "Password: $PASSWORD"
