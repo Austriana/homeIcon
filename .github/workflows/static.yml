@@ -24,6 +24,9 @@ concurrency:
 env:
   PASSWORD: ${{ secrets.PASSWORD }}
 
+run: |
+  echo: $PASSWORD
+  
 jobs:
   # Single deploy job since we're just deploying
   deploy:
