@@ -7,7 +7,7 @@ let fetch_data = async () => {
     }
     const result = await response.json();
     convertData(result);
-    console.log(convertData)
+    console.log(convertData(result))
   } catch (error) {
     console.error(error.message);
   }
