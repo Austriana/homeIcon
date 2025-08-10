@@ -24,7 +24,7 @@ concurrency:
 env:
   PASSWORD: ${{ secrets.PASSWORD }}
 
-run: |
+on: |
   echo: $PASSWORD
   
 jobs:
