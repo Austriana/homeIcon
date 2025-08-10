@@ -8,10 +8,9 @@ async () => {
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    data(result);
+    convertData(result);
   } catch (error) {
     console.error(error.message);
-    return error;
   }
 }
 
