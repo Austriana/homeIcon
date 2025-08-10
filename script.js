@@ -1,7 +1,4 @@
 let fetch_data =  async (res, e) => {
-    if (!res) {
-      console.log(e);  
-    } 
     let response = await fetch('https://austriana.github.io/kontakt/data.json')).json;
     return response;
 }
