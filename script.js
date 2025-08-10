@@ -3,4 +3,5 @@ let fetch_data = async () => {
     let data = JSON.parse(fetch);
     console.log(data);
 }
-console.log(fetch_data());
+
+fetch_data();
