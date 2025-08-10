@@ -1,4 +1,6 @@
-async function getData() {
+
+
+async () => {
   const url = "https://austriana.github.io/kontakt/data.json";
   try {
     const response = await fetch(url);
@@ -6,12 +8,14 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    console.log(result);
-    return result;
+    data(result);
   } catch (error) {
     console.error(error.message);
     return error;
   }
 }
 
-getData();
+function convertData (result){
+    let passwort = result.PASSWORD;
+    console.log(passwort);
+}
