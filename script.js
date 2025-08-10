@@ -5,6 +5,6 @@ let fetch_data =  async () => {
 
 let myData = async () => {
     let myObj = await fetch_data();
-    console.log(myObj.PASSWORT);
+    console.log(myObj['PASSWORD']);
 }
 myData();
