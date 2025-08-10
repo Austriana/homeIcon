@@ -6,18 +6,16 @@ let fetch_data = async () => {
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    console.log(convertData(result));
-  } catch (error) {
-    console.error(error.message);
-  }
-}
-const convertData = result => {
     const name = result.Name;
     const email = result.Email;
     const adresse = result.Adresse;
     const telefon = result.Telefon;
     const passwort = result.PASSWORD;
-    return name, adresse, email, telefon, passwort;
-}
 
+    console.log(name, email, adresse, telefon, passwort)
+
+  } catch (error) {
+    console.error(error.message);
+  }
+}
 fetch_data();
