@@ -13,6 +13,7 @@ async () => {
 }
 
 function convertData (result){
+    console.log(result)
     let passwort = result.PASSWORD;
     console.log(passwort);
 }
