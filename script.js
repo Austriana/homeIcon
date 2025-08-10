@@ -7,16 +7,11 @@ let fetch_data = async () => {
     }
     const result = await response.json();
     convertData(result);
+    console.log(convertData)
   } catch (error) {
     console.error(error.message);
   }
 }
-
-function convertData (result){
-    console.log(result)
-    let passwort = result.PASSWORD;
-    console.log(passwort);
-}
+const convertData = result => result.PASSWORD;
 
 fetch_data();
-console.log(fetch_data());
