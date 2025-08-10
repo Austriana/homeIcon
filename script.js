@@ -3,4 +3,5 @@ let fetch_data =  async () => {
     let data = await res.json();
     return data;
 }
-console.log(fetch_data());
+let obj = fetch_data();
+console.log(obj.PASSWORT)
