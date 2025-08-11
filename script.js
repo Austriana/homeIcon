@@ -1,5 +1,3 @@
-let permission = false;
-
 let fetch_data = async (token) => {
     const url = `https://austriana.github.io/kontakt/${token}.json`;
   try {
