@@ -1,5 +1,5 @@
-let fetch_data = async () => {
-    let token = prompt();
+let permission = false;
+let fetch_data = async (token) => {
     const url = `https://austriana.github.io/kontakt/${token}.json`;
   try {
     const response = await fetch(url);
@@ -13,10 +13,19 @@ let fetch_data = async () => {
         const adresse = result.adresse;
         const telefon = result.telefon;
         const passwort = result.passwort;
+        if(token === result.passwort){
+            permission = true;
+        }
         console.log(name, email, adresse, telefon, passwort)
+        console.log(permission);
     }
   } catch (error) {
     console.error(error.message);
   }
 }
-fetch_data();
+
+let submit = document.getElementById('submit');
+submit.addEventListener('click', () => {
+    let input = document.getElementById('input');
+    fetch_data(input.value);
+})
