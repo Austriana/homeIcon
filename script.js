@@ -1,5 +1,5 @@
 let fetch_data = async () => {
-  const url = "https://austriana.github.io/kontakt/data.json";
+  const url = "https://austriana.github.io/kontakt/dat.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {
