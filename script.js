@@ -5,15 +5,15 @@ let fetch_data = async () => {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-    const result = await response.json();
-    const name = result.name;
-    const email = result.email;
-    const adresse = result.adresse;
-    const telefon = result.telefon;
-    const passwort = result.passwort;
-
-    console.log(name, email, adresse, telefon, passwort)
-
+    if(response.ok){
+        const result = await response.json();
+        const name = result.name;
+        const email = result.email;
+        const adresse = result.adresse;
+        const telefon = result.telefon;
+        const passwort = result.passwort;
+        console.log(name, email, adresse, telefon, passwort)
+    }
   } catch (error) {
     console.error(error.message);
   }
