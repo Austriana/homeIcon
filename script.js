@@ -1,5 +1,6 @@
 let fetch_data = async () => {
-  const url = "https://austriana.github.io/kontakt/ef61bc.json";
+    let token = prompt();
+    const url = `https://austriana.github.io/kontakt/${token}.json`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
