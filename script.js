@@ -8,7 +8,7 @@ let fetch_data = async (token) => {
     if(response.ok){
         const result = await response.json();
         if(token === result.token){
-            window.location.replace("http://www.w3schools.com");
+            window.location.replace("https://www.youtube.com");
         }
     }
   } catch (error) {
