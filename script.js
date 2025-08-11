@@ -1,4 +1,5 @@
 let permission = false;
+
 let fetch_data = async (token) => {
     const url = `https://austriana.github.io/kontakt/${token}.json`;
   try {
@@ -8,16 +9,9 @@ let fetch_data = async (token) => {
     }
     if(response.ok){
         const result = await response.json();
-        const name = result.name;
-        const email = result.email;
-        const adresse = result.adresse;
-        const telefon = result.telefon;
-        const passwort = result.passwort;
         if(token === result.passwort){
-            permission = true;
+            window.location.replace("http://www.w3schools.com");
         }
-        console.log(name, email, adresse, telefon, passwort)
-        console.log(permission);
     }
   } catch (error) {
     console.error(error.message);
